@@ -185,12 +185,12 @@ input, select, textarea {
 		a.special:not(.button) {
 			text-decoration: none;
 			border-bottom: 0;
-			display: block;
+			display: inline-block;
 			font-family: Raleway, Helvetica, sans-serif;
 			font-size: 0.8em;
 			font-weight: 700;
 			letter-spacing: 0.1em;
-			margin: 0 0 2em 0;
+			margin: 0 2em 2em 0;
 			text-transform: uppercase;
 		}
 
@@ -2634,11 +2634,12 @@ input, select, textarea {
 	ul.contact {
 		list-style: none;
 		padding: 0;
+    display: flex;
 	}
 
 		ul.contact li {
 			text-decoration: none;
-			margin: 2.5em 0 0 0;
+      margin: 0 0 0 2.5em;
 			padding: 0 0 0 3.25em;
 			position: relative;
 		}
@@ -2667,7 +2668,7 @@ input, select, textarea {
 			}
 
 			ul.contact li:first-child {
-				margin-top: 0;
+				margin-left: 0;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -2996,6 +2997,8 @@ input, select, textarea {
 				.features article .image img {
 					border-radius: 5px 5px 0 0;
 					width: 100%;
+          padding: 50px;
+          max-height: 333px;
 				}
 
 		@media screen and (max-width: 980px) {
@@ -3756,14 +3759,17 @@ input, select, textarea {
 			.wrapper.spotlight .image {
 				border-radius: 100%;
 				margin: 0 3em 2em 0;
+        height: 15em;
 				width: 22em;
 				overflow: hidden;
 				-ms-flex: 1;
 			}
 
 				.wrapper.spotlight .image img {
-					border-radius: 100%;
+					border-radius: 50%;
 					width: 100%;
+          height: 100%;
+          object-fit: cover;
 				}
 
 			.wrapper.spotlight .content {
@@ -3991,7 +3997,6 @@ input, select, textarea {
 		}
 
 		#footer .inner .contact {
-			width: calc(50% - 1.5em);
 		}
 
 		#footer .inner .copyright {
